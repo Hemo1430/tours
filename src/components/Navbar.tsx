@@ -142,40 +142,41 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: lang === 'ar' ? '-100%' : '100%' }}
               transition={{ type: 'spring', damping: 28, stiffness: 240 }}
-              className={`fixed top-0 bottom-0 ${lang === 'ar' ? 'left-0' : 'right-0'} w-[82%] max-w-[340px] h-full bg-white shadow-[0_0_40px_rgba(10,29,58,0.25)] p-5 flex flex-col justify-between z-[1000001]`}
+              className={`fixed top-0 bottom-0 ${lang === 'ar' ? 'left-0' : 'right-0'} w-[82%] max-w-[340px] h-full bg-white shadow-[0_0_40px_rgba(10,29,58,0.25)] flex flex-col z-[1000001]`}
             >
-              <div>
-                {/* Custom Brand Header inside Drawer */}
-                <div className="flex justify-between items-center pb-5 mb-5 border-b border-slate-100">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-10 h-10 rounded-full overflow-hidden bg-slate-50 flex items-center justify-center p-0.5 shadow-[0_0_10px_rgba(7,184,0,0.15)]">
-                      <img 
-                        src="https://www.elbahrintours.com/siteAssests/images/logo.png" 
-                        alt="Logo" 
-                        className="w-full h-full object-contain" 
-                      />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="font-extrabold text-[#07b800] text-sm sm:text-base tracking-tight leading-tight">
-                        {lang === 'ar' ? 'البحرين للسياحة' : 'El-Bahrin Tours'}
-                      </span>
-                      <span className="text-[10px] text-slate-400 font-medium">
-                        {lang === 'ar' ? 'رحلتك المفضلة تبدأ من هنا' : 'Your journey starts here'}
-                      </span>
-                    </div>
+              {/* Custom Brand Header inside Drawer - Always visible/fixed */}
+              <div className="flex justify-between items-center p-5 border-b border-slate-100 flex-shrink-0">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-10 h-10 rounded-full overflow-hidden bg-slate-50 flex items-center justify-center p-0.5 shadow-[0_0_10px_rgba(7,184,0,0.15)]">
+                    <img 
+                      src="https://www.elbahrintours.com/siteAssests/images/logo.png" 
+                      alt="Logo" 
+                      className="w-full h-full object-contain" 
+                    />
                   </div>
-                  
-                  <button 
-                    onClick={() => setIsMenuOpen(false)}
-                    className="p-2 rounded-full text-slate-400 hover:text-slate-800 hover:bg-slate-100 transition-all duration-200"
-                    aria-label="Close menu"
-                  >
-                    <X className="w-5 h-5" />
-                  </button>
+                  <div className="flex flex-col">
+                    <span className="font-extrabold text-[#07b800] text-sm sm:text-base tracking-tight leading-tight">
+                      {lang === 'ar' ? 'البحرين للسياحة' : 'El-Bahrin Tours'}
+                    </span>
+                    <span className="text-[10px] text-slate-400 font-medium">
+                      {lang === 'ar' ? 'رحلتك المفضلة تبدأ من هنا' : 'Your journey starts here'}
+                    </span>
+                  </div>
                 </div>
+                
+                <button 
+                  onClick={() => setIsMenuOpen(false)}
+                  className="p-2 rounded-full text-slate-400 hover:text-slate-800 hover:bg-slate-100 transition-all duration-200"
+                  aria-label="Close menu"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
 
+              {/* Scrollable Container for Navigation & Options */}
+              <div className="flex-1 overflow-y-auto no-scrollbar p-5 flex flex-col justify-between min-h-0">
                 {/* Navigation Links with Icons */}
-                <nav className="flex flex-col gap-2.5 py-1">
+                <nav className="flex flex-col gap-2.5 py-1 flex-shrink-0">
                   {navLinks.map((link) => {
                     const isActive = location.pathname === link.path;
                     return (
@@ -207,49 +208,49 @@ export default function Navbar() {
                     );
                   })}
                 </nav>
-              </div>
 
-              {/* Preferences and Book Actions */}
-              <div className="pt-5 border-t border-slate-100 flex flex-col gap-4">
-                <div className="bg-slate-50 rounded-2xl p-3.5 flex flex-col gap-3">
-                  <span className="text-[11px] font-bold text-slate-400 tracking-wider uppercase">
-                    {lang === 'ar' ? 'الإعدادات والعملة' : 'PREFERENCES'}
-                  </span>
-                  
-                  <div className="grid grid-cols-2 gap-2">
-                    {/* Language Switch */}
-                    <button 
-                      onClick={handleLangToggle}
-                      className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#07b800] hover:bg-[#07b800]/5 transition-all duration-200 active:scale-95 text-xs font-bold text-slate-700 shadow-3xs"
-                    >
-                      <Globe className="w-3.5 h-3.5 text-[#07b800]" />
-                      {lang === 'en' ? 'العربية' : 'English'}
-                    </button>
+                {/* Preferences and Book Actions */}
+                <div className="pt-6 mt-6 border-t border-slate-100 flex flex-col gap-4 flex-shrink-0">
+                  <div className="bg-slate-50 rounded-2xl p-3.5 flex flex-col gap-3">
+                    <span className="text-[11px] font-bold text-slate-400 tracking-wider uppercase">
+                      {lang === 'ar' ? 'الإعدادات والعملة' : 'PREFERENCES'}
+                    </span>
+                    
+                    <div className="grid grid-cols-2 gap-2">
+                      {/* Language Switch */}
+                      <button 
+                        onClick={handleLangToggle}
+                        className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#07b800] hover:bg-[#07b800]/5 transition-all duration-200 active:scale-95 text-xs font-bold text-slate-700 shadow-3xs"
+                      >
+                        <Globe className="w-3.5 h-3.5 text-[#07b800]" />
+                        {lang === 'en' ? 'العربية' : 'English'}
+                      </button>
 
-                    {/* Currency Switch */}
-                    <button 
-                      onClick={handleCurrencyToggle}
-                      className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#07b800] hover:bg-[#07b800]/5 transition-all duration-200 active:scale-95 text-xs font-bold text-slate-700 shadow-3xs"
-                    >
-                      <Banknote className="w-3.5 h-3.5 text-[#07b800]" />
-                      {currency}
-                    </button>
+                      {/* Currency Switch */}
+                      <button 
+                        onClick={handleCurrencyToggle}
+                        className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#07b800] hover:bg-[#07b800]/5 transition-all duration-200 active:scale-95 text-xs font-bold text-slate-700 shadow-3xs"
+                      >
+                        <Banknote className="w-3.5 h-3.5 text-[#07b800]" />
+                        {currency}
+                      </button>
+                    </div>
                   </div>
+
+                  {/* Instant Booking Action */}
+                  <Link
+                    to="/bookings"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="relative w-full overflow-hidden bg-gradient-to-r from-[#07b800] to-[#06a300] text-white py-3.5 rounded-xl font-bold text-center block shadow-[0_4px_14px_rgba(7,184,0,0.3)] hover:shadow-[0_6px_20px_rgba(7,184,0,0.45)] transition-all duration-300 hover:scale-[1.02] active:scale-95"
+                  >
+                    <div className="relative z-10 flex items-center justify-center gap-2">
+                      <span>{t('nav.book')}</span>
+                      {selectedTourId && (
+                        <span className="w-2.5 h-2.5 bg-green-200 rounded-full border border-white animate-pulse"></span>
+                      )}
+                    </div>
+                  </Link>
                 </div>
-
-                {/* Instant Booking Action */}
-                <Link
-                  to="/bookings"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="relative w-full overflow-hidden bg-gradient-to-r from-[#07b800] to-[#06a300] text-white py-3.5 rounded-xl font-bold text-center block shadow-[0_4px_14px_rgba(7,184,0,0.3)] hover:shadow-[0_6px_20px_rgba(7,184,0,0.45)] transition-all duration-300 hover:scale-[1.02] active:scale-95"
-                >
-                  <div className="relative z-10 flex items-center justify-center gap-2">
-                    <span>{t('nav.book')}</span>
-                    {selectedTourId && (
-                      <span className="w-2.5 h-2.5 bg-green-200 rounded-full border border-white animate-pulse"></span>
-                    )}
-                  </div>
-                </Link>
               </div>
             </motion.div>
           </div>
