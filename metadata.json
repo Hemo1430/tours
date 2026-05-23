@@ -1,0 +1,8 @@
+{
+  "name": "El-Bahrin Tours",
+  "description": "A travel and tour booking platform supporting multi-currency and multilingual experiences.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
