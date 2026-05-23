@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Globe, Banknote, Menu, X, Home, Compass, Headphones, Info, ChevronRight, ChevronLeft } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 import { useAppContext } from '../context/AppContext';
+import logoImg from '../elbahrin-logo.png';
 
 export default function Navbar() {
   const { lang, setLang, currency, setCurrency, selectedTourId, t } = useAppContext();
@@ -46,9 +47,9 @@ export default function Navbar() {
           <Link to="/" className="flex items-center gap-2 sm:gap-3 cursor-pointer group">
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(7,184,0,0.3)] group-hover:shadow-[0_0_20px_rgba(7,184,0,0.5)] transition-all duration-300 overflow-hidden">
               <img 
-                src="https://www.elbahrintours.com/siteAssests/images/logo.png" 
+                src={logoImg} 
                 alt="El-Bahrin Tours" 
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover"
               />
             </div>
             <span className="font-bold text-base sm:text-lg md:text-2xl tracking-tight text-[#07b800] transition-all duration-300">
@@ -149,9 +150,9 @@ export default function Navbar() {
                 <div className="flex items-center gap-2.5">
                   <div className="w-10 h-10 rounded-full overflow-hidden bg-slate-50 flex items-center justify-center p-0.5 shadow-[0_0_10px_rgba(7,184,0,0.15)]">
                     <img 
-                      src="https://www.elbahrintours.com/siteAssests/images/logo.png" 
+                      src={logoImg} 
                       alt="Logo" 
-                      className="w-full h-full object-contain" 
+                      className="w-full h-full object-cover" 
                     />
                   </div>
                   <div className="flex flex-col">

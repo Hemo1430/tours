@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAppContext } from '../context/AppContext';
 import { ArrowRight, Star, Anchor, Shield, HelpCircle, StarHalf } from 'lucide-react';
+import logoImg from '../elbahrin-logo.png';
 
 export default function Home() {
   const { lang, t } = useAppContext();
@@ -29,9 +30,9 @@ export default function Home() {
           </div>
           <div className="w-full md:w-1/2 flex justify-center md:justify-end">
             <img 
-              src="https://www.elbahrintours.com/siteAssests/images/logo.png" 
+              src={logoImg} 
               alt="El-Bahrin Tours Logo" 
-              className="w-full max-w-sm lg:max-w-md object-contain drop-shadow-2xl"
+              className="w-full max-w-sm lg:max-w-md object-contain"
             />
           </div>
         </section>
