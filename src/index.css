@@ -40,7 +40,7 @@
   scrollbar-width: none;  /* Firefox */
 }
 
-/* Custom scrollbar styling with #07B800 themes */
+/* Custom scrollbar styling with #2672b0 themes */
 ::-webkit-scrollbar {
   width: 4px;
   height: 4px;
@@ -51,18 +51,18 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #07B800;
+  background: #2672b0;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #058f00;
+  background: #1d5b8e;
 }
 
 /* Firefox scrollbar support */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #07B800 #f1f5f9;
+  scrollbar-color: #2672b0 #f1f5f9;
 }
 
 /* Apply globally for Arabic language documents and elements with RTL reading direction */

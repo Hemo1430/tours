@@ -59,7 +59,7 @@ export default function Tours() {
         {/* Badges */}
         <div className="absolute top-4 inset-x-4 flex justify-end items-start z-20">
           {isSelected && (
-            <span className="bg-[#07b800] border border-white/20 text-white text-[10px] font-extrabold px-2 py-1 rounded shadow-sm">
+            <span className="bg-[#2672b0] border border-white/20 text-white text-[10px] font-extrabold px-2 py-1 rounded shadow-sm">
               {isAr ? 'محدد' : 'Selected'}
             </span>
           )}
@@ -67,7 +67,7 @@ export default function Tours() {
 
         {/* Content Area */}
         <div className="absolute inset-0 z-20 p-5 flex flex-col justify-end space-y-2">
-          <h3 className="text-white font-bold text-lg md:text-xl leading-tight group-hover:text-[#77ff60] transition-colors line-clamp-1">
+          <h3 className="text-white font-bold text-lg md:text-xl leading-tight group-hover:text-[#7ec2ff] transition-colors line-clamp-1">
             {tour.title[lang]}
           </h3>
           <p className="text-white/80 text-xs md:text-sm leading-relaxed line-clamp-2">
@@ -80,7 +80,7 @@ export default function Tours() {
             </span>
             <button 
               onClick={(e) => handleSelectTour(tour.id, e)}
-              className="bg-[#07b800] hover:bg-[#06a300] text-white font-bold text-xs px-4 py-2 rounded-lg shadow-md transition-all active:scale-95"
+              className="bg-[#2672b0] hover:bg-[#1d5c92] text-white font-bold text-xs px-4 py-2 rounded-lg shadow-md transition-all active:scale-95"
             >
               {isAr ? 'احجز الآن' : 'Book Now'}
             </button>
@@ -102,8 +102,8 @@ export default function Tours() {
               onClick={() => setActiveCategory(tab.id)}
               className={`flex-none px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-200 shadow-xs ${
                 activeCategory === tab.id
-                  ? 'bg-[#07b800] text-white shadow-md'
-                  : 'bg-white border border-slate-200 text-slate-600 hover:border-[#07b800] hover:text-[#07b800]'
+                  ? 'bg-[#2672b0] text-white shadow-md'
+                  : 'bg-white border border-slate-200 text-slate-600 hover:border-[#2672b0] hover:text-[#2672b0]'
               }`}
             >
               {tab.name}
@@ -117,7 +117,7 @@ export default function Tours() {
         {/* Category: Hajj & Umrah */}
         {(activeCategory === 'all' || activeCategory === 'hajj') && (
           <section className="space-y-6">
-            <div className="flex items-center justify-between border-s-4 border-[#07b800] ps-3.5 mb-6">
+            <div className="flex items-center justify-between border-s-4 border-[#2672b0] ps-3.5 mb-6">
               <h2 className="text-xl md:text-2xl font-black text-slate-800 uppercase tracking-wide">
                 {t('tours.hajj')}
               </h2>
@@ -131,7 +131,7 @@ export default function Tours() {
         {/* Category: Local Treasures */}
         {(activeCategory === 'all' || activeCategory === 'local') && (
           <section className="space-y-6">
-            <div className="flex items-center justify-between border-s-4 border-[#07b800] ps-3.5 mb-6">
+            <div className="flex items-center justify-between border-s-4 border-[#2672b0] ps-3.5 mb-6">
               <h2 className="text-xl md:text-2xl font-black text-slate-800 uppercase tracking-wide">
                 {t('tours.local')}
               </h2>
@@ -145,7 +145,7 @@ export default function Tours() {
         {/* Category: World Destinations */}
         {(activeCategory === 'all' || activeCategory === 'world') && (
           <section className="space-y-6">
-            <div className="flex items-center justify-between border-s-4 border-[#07b800] ps-3.5 mb-6">
+            <div className="flex items-center justify-between border-s-4 border-[#2672b0] ps-3.5 mb-6">
               <h2 className="text-xl md:text-2xl font-black text-slate-800 uppercase tracking-wide">
                 {t('tours.world')}
               </h2>

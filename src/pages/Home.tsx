@@ -19,7 +19,7 @@ export default function Home() {
         {/* Stats Section */}
         <section className="flex flex-col md:flex-row items-center justify-between gap-16 py-8">
           <div className="w-full md:w-1/2 flex flex-col gap-4">
-            <h1 className="text-4xl md:text-5xl lg:text-[64px] font-bold text-[#07b800] leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-[64px] font-bold text-[#2672b0] leading-tight">
               {isAr ? 'البحرين للسياحة' : 'El-Bahrin Tours'}
             </h1>
             <p className="text-lg text-slate-600 max-w-xl leading-relaxed">
@@ -70,7 +70,7 @@ export default function Home() {
             </div>
             <div className="w-[30%] max-w-[240px] aspect-square rounded-full border-2 border-slate-300 flex flex-col items-center justify-center text-[#0a1d3a] bg-white shadow-sm transition-all duration-300">
               <span className="text-[clamp(2rem,85px,150px)] lg:text-[150px] leading-none font-bold mb-1">4</span>
-              <div className="flex gap-0.5 md:gap-1 text-[#07b800]">
+              <div className="flex gap-0.5 md:gap-1 text-[#2672b0]">
                 <Star className="w-[clamp(10px,1.8vw,24px)] h-[clamp(10px,1.8vw,24px)] fill-current border-transparent" />
                 <Star className="w-[clamp(10px,1.8vw,24px)] h-[clamp(10px,1.8vw,24px)] fill-current border-transparent" />
                 <Star className="w-[clamp(10px,1.8vw,24px)] h-[clamp(10px,1.8vw,24px)] fill-current border-transparent" />
@@ -89,7 +89,7 @@ export default function Home() {
             <div className="absolute inset-0 p-8 flex flex-col justify-end">
               <div className="flex justify-between items-end">
                 <h3 className="text-white text-3xl md:text-[40px] font-bold">{isAr ? 'حج وعمرة' : 'Hajj and Umrah'}</h3>
-                <button className="w-14 h-14 bg-white text-[#0a1d3a] rounded-full flex items-center justify-center shadow-lg group-hover:bg-[#07b800] group-hover:text-white transition-colors">
+                <button className="w-14 h-14 bg-white text-[#0a1d3a] rounded-full flex items-center justify-center shadow-lg group-hover:bg-[#2672b0] group-hover:text-white transition-colors">
                   <ArrowRight className={`w-6 h-6 ${isAr ? 'rotate-180' : ''}`} />
                 </button>
               </div>
@@ -103,7 +103,7 @@ export default function Home() {
             <div className="absolute inset-0 p-8 flex flex-col justify-end">
               <div className="flex justify-between items-end">
                 <h3 className="text-white text-3xl md:text-[40px] font-bold">{isAr ? 'سياحة داخلية' : 'Local Tourism'}</h3>
-                <button className="w-14 h-14 bg-white text-[#0a1d3a] rounded-full flex items-center justify-center shadow-lg group-hover:bg-[#07b800] group-hover:text-white transition-colors">
+                <button className="w-14 h-14 bg-white text-[#0a1d3a] rounded-full flex items-center justify-center shadow-lg group-hover:bg-[#2672b0] group-hover:text-white transition-colors">
                   <ArrowRight className={`w-6 h-6 ${isAr ? 'rotate-180' : ''}`} />
                 </button>
               </div>
@@ -117,7 +117,7 @@ export default function Home() {
             <div className="absolute inset-0 p-8 flex flex-col justify-end">
               <div className="flex justify-between items-end">
                 <h3 className="text-white text-3xl md:text-[40px] font-bold">{isAr ? 'سياحة خارجية' : 'Global Tourism'}</h3>
-                <button className="w-14 h-14 bg-white text-[#0a1d3a] rounded-full flex items-center justify-center shadow-lg group-hover:bg-[#07b800] group-hover:text-white transition-colors">
+                <button className="w-14 h-14 bg-white text-[#0a1d3a] rounded-full flex items-center justify-center shadow-lg group-hover:bg-[#2672b0] group-hover:text-white transition-colors">
                   <ArrowRight className={`w-6 h-6 ${isAr ? 'rotate-180' : ''}`} />
                 </button>
               </div>

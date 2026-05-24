@@ -19,7 +19,7 @@ export default function Footer() {
         </div>
         
         <nav className="flex flex-col items-center md:items-start gap-y-3">
-          <Link to="/support" className="text-slate-300 hover:text-white hover:opacity-80 transition-all duration-200 focus:ring-2 focus:ring-[#07b800] outline-none rounded-sm text-sm uppercase tracking-wider font-bold mb-1">
+          <Link to="/support" className="text-slate-300 hover:text-white hover:opacity-80 transition-all duration-200 focus:ring-2 focus:ring-[#2672b0] outline-none rounded-sm text-sm uppercase tracking-wider font-bold mb-1">
             {t('footer.contact')}
           </Link>
           <div className="flex items-center gap-2 text-slate-400 text-sm">
@@ -30,7 +30,7 @@ export default function Footer() {
             <Phone className="w-4 h-4" />
             <span dir="ltr" className="inline-block">01006236286</span>
           </div>
-          <Link to="/support" className="flex items-center justify-center gap-2 text-slate-300 hover:bg-[#07b800] hover:border-[#07b800] hover:text-white transition-all text-sm mt-1 border border-slate-600 px-4 py-2 rounded-lg w-full md:w-auto font-medium">
+          <Link to="/support" className="flex items-center justify-center gap-2 text-slate-300 hover:bg-[#2672b0] hover:border-[#2672b0] hover:text-white transition-all text-sm mt-1 border border-slate-600 px-4 py-2 rounded-lg w-full md:w-auto font-medium">
             <MapPin className="w-4 h-4" />
             {t('support.branches')}
           </Link>

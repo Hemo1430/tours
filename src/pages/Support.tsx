@@ -99,7 +99,7 @@ export default function Support() {
                   />
                 )}
                 {branch.isMain && (
-                  <span className="absolute top-4 start-4 bg-[#07b800] text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md z-10">
+                  <span className="absolute top-4 start-4 bg-[#2672b0] text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md z-10">
                     {t('support.mainBranch')}
                   </span>
                 )}
@@ -113,16 +113,16 @@ export default function Support() {
                   
                   <div className="space-y-3.5 text-slate-600 text-sm">
                     <div className="flex items-start gap-2.5">
-                      <MapPin className="w-5 h-5 text-[#07b800] shrink-0" />
+                      <MapPin className="w-5 h-5 text-[#2672b0] shrink-0" />
                       <span>{branch.address}</span>
                     </div>
                     <div className="flex items-start gap-2.5">
-                      <Phone className="w-5 h-5 text-[#07b800] shrink-0" />
+                      <Phone className="w-5 h-5 text-[#2672b0] shrink-0" />
                       <span>{t('support.hotline')}: <strong className="text-slate-800 inline-block" dir="ltr">{branch.hotline}</strong></span>
                     </div>
                     <div className="flex items-start gap-2.5">
-                      <Mail className="w-5 h-5 text-[#07b800] shrink-0" />
-                      <a href="mailto:info@elbahrintours.com" className="hover:text-[#07b800] transition-colors select-all">info@elbahrintours.com</a>
+                      <Mail className="w-5 h-5 text-[#2672b0] shrink-0" />
+                      <a href="mailto:info@elbahrintours.com" className="hover:text-[#2672b0] transition-colors select-all">info@elbahrintours.com</a>
                     </div>
                   </div>
                 </div>

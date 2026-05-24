@@ -45,14 +45,14 @@ export default function Navbar() {
         <div className="flex justify-between items-center px-4 md:px-6 lg:px-8 py-2 max-w-7xl mx-auto w-full h-14 sm:h-16 md:h-20 transition-all duration-300">
           {/* Brand Logo & Name */}
           <Link to="/" className="flex items-center gap-2 sm:gap-3 cursor-pointer group">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(7,184,0,0.3)] group-hover:shadow-[0_0_20px_rgba(7,184,0,0.5)] transition-all duration-300 overflow-hidden">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(38,114,176,0.3)] group-hover:shadow-[0_0_20px_rgba(38,114,176,0.5)] transition-all duration-300 overflow-hidden">
               <img 
                 src={logoImg} 
                 alt="El-Bahrin Tours" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <span className="font-bold text-base sm:text-lg md:text-2xl tracking-tight text-[#07b800] transition-all duration-300">
+            <span className="font-bold text-base sm:text-lg md:text-2xl tracking-tight text-[#2672b0] transition-all duration-300">
               {lang === 'ar' ? 'البحرين للسياحة' : 'El-Bahrin Tours'}
             </span>
           </Link>
@@ -67,8 +67,8 @@ export default function Navbar() {
                   to={link.path}
                   className={`px-3 py-2 rounded-md text-sm lg:text-base font-medium transition-colors duration-200 ${
                     isActive
-                      ? 'text-[#07b800] font-bold border-b-2 border-[#07b800]'
-                      : 'text-slate-600 hover:text-[#07b800] hover:bg-slate-50'
+                      ? 'text-[#2672b0] font-bold border-b-2 border-[#2672b0]'
+                      : 'text-slate-600 hover:text-[#2672b0] hover:bg-slate-50'
                   }`}
                 >
                   {link.name}
@@ -82,7 +82,7 @@ export default function Navbar() {
             {/* Language Toggle */}
             <button
               onClick={handleLangToggle}
-              className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full text-slate-600 hover:text-[#07b800] hover:bg-slate-50 transition-all duration-200 active:scale-95"
+              className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full text-slate-600 hover:text-[#2672b0] hover:bg-slate-50 transition-all duration-200 active:scale-95"
               aria-label="Toggle language"
               title={lang === 'en' ? 'Switch to Arabic' : 'Switch to English'}
             >
@@ -92,7 +92,7 @@ export default function Navbar() {
             {/* Currency Toggle */}
             <button
               onClick={handleCurrencyToggle}
-              className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full text-slate-600 hover:text-[#07b800] hover:bg-slate-50 transition-all duration-200 active:scale-95 font-semibold text-xs sm:text-sm relative"
+              className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full text-slate-600 hover:text-[#2672b0] hover:bg-slate-50 transition-all duration-200 active:scale-95 font-semibold text-xs sm:text-sm relative"
               aria-label="Toggle currency"
               title={`Current: ${currency}`}
             >
@@ -104,18 +104,18 @@ export default function Navbar() {
             {/* Book Button */}
             <Link
               to="/bookings"
-              className="hidden sm:relative sm:inline-flex bg-[#07b800] text-white px-3 py-1.5 sm:px-5 sm:py-2 rounded-md font-semibold text-xs sm:text-sm lg:text-base shadow-[0_0_10px_rgba(7,184,0,0.2)] hover:shadow-[0_0_20px_rgba(7,184,0,0.4)] hover:bg-[#06a300] transition-all duration-300 active:scale-95 text-center"
+              className="hidden sm:relative sm:inline-flex bg-[#2672b0] text-white px-3 py-1.5 sm:px-5 sm:py-2 rounded-md font-semibold text-xs sm:text-sm lg:text-base shadow-[0_0_10px_rgba(38,114,176,0.2)] hover:shadow-[0_0_20px_rgba(38,114,176,0.4)] hover:bg-[#1d5c92] transition-all duration-300 active:scale-95 text-center"
             >
               {t('nav.book')}
               {selectedTourId && (
-                <span className="absolute -top-1 -end-1 w-2.5 h-2.5 bg-green-200 rounded-full border border-white animate-pulse"></span>
+                <span className="absolute -top-1 -end-1 w-2.5 h-2.5 bg-blue-200 rounded-full border border-white animate-pulse"></span>
               )}
             </Link>
 
             {/* Mobile Menu Toggle */}
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center text-[#07b800] transition-all duration-300"
+              className="md:hidden w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center text-[#2672b0] transition-all duration-300"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
@@ -148,7 +148,7 @@ export default function Navbar() {
               {/* Custom Brand Header inside Drawer - Always visible/fixed */}
               <div className="flex justify-between items-center p-5 border-b border-slate-100 flex-shrink-0">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-10 h-10 rounded-full overflow-hidden bg-slate-50 flex items-center justify-center p-0.5 shadow-[0_0_10px_rgba(7,184,0,0.15)]">
+                  <div className="w-10 h-10 rounded-full overflow-hidden bg-slate-50 flex items-center justify-center p-0.5 shadow-[0_0_10px_rgba(38,114,176,0.15)]">
                     <img 
                       src={logoImg} 
                       alt="Logo" 
@@ -156,7 +156,7 @@ export default function Navbar() {
                     />
                   </div>
                   <div className="flex flex-col">
-                    <span className="font-extrabold text-[#07b800] text-sm sm:text-base tracking-tight leading-tight">
+                    <span className="font-extrabold text-[#2672b0] text-sm sm:text-base tracking-tight leading-tight">
                       {lang === 'ar' ? 'البحرين للسياحة' : 'El-Bahrin Tours'}
                     </span>
                     <span className="text-[10px] text-slate-400 font-medium">
@@ -187,13 +187,13 @@ export default function Navbar() {
                         onClick={() => setIsMenuOpen(false)}
                         className={`group flex items-center justify-between px-4 py-3.5 rounded-xl transition-all duration-300 ${
                           isActive 
-                            ? 'bg-[#07b800]/10 text-[#07b800] font-bold shadow-xs' 
-                            : 'text-slate-700 hover:text-[#07b800] hover:bg-slate-50 font-medium'
+                            ? 'bg-[#2672b0]/10 text-[#2672b0] font-bold shadow-xs' 
+                            : 'text-slate-700 hover:text-[#2672b0] hover:bg-slate-50 font-medium'
                         }`}
                       >
                         <div className="flex items-center gap-3.5">
                           <span className={`p-1.5 rounded-lg transition-colors ${
-                            isActive ? 'bg-[#07b800] text-white' : 'bg-slate-100 text-slate-400 group-hover:text-[#07b800] group-hover:bg-[#07b800]/10'
+                            isActive ? 'bg-[#2672b0] text-white' : 'bg-slate-100 text-slate-400 group-hover:text-[#2672b0] group-hover:bg-[#2672b0]/10'
                           }`}>
                             {getLinkIcon(link.path)}
                           </span>
@@ -201,9 +201,9 @@ export default function Navbar() {
                         </div>
                         
                         {lang === 'ar' ? (
-                          <ChevronLeft className={`w-4 h-4 transition-transform ${isActive ? 'text-[#07b800]' : 'text-slate-300 group-hover:text-[#07b800]'}`} />
+                          <ChevronLeft className={`w-4 h-4 transition-transform ${isActive ? 'text-[#2672b0]' : 'text-slate-300 group-hover:text-[#2672b0]'}`} />
                         ) : (
-                          <ChevronRight className={`w-4 h-4 transition-transform ${isActive ? 'text-[#07b800]' : 'text-slate-300 group-hover:text-[#07b800]'}`} />
+                          <ChevronRight className={`w-4 h-4 transition-transform ${isActive ? 'text-[#2672b0]' : 'text-slate-300 group-hover:text-[#2672b0]'}`} />
                         )}
                       </Link>
                     );
@@ -221,18 +221,18 @@ export default function Navbar() {
                       {/* Language Switch */}
                       <button 
                         onClick={handleLangToggle}
-                        className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#07b800] hover:bg-[#07b800]/5 transition-all duration-200 active:scale-95 text-xs font-bold text-slate-700 shadow-3xs"
+                        className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#2672b0] hover:bg-[#2672b0]/5 transition-all duration-200 active:scale-95 text-xs font-bold text-slate-700 shadow-3xs"
                       >
-                        <Globe className="w-3.5 h-3.5 text-[#07b800]" />
+                        <Globe className="w-3.5 h-3.5 text-[#2672b0]" />
                         {lang === 'en' ? 'العربية' : 'English'}
                       </button>
 
                       {/* Currency Switch */}
                       <button 
                         onClick={handleCurrencyToggle}
-                        className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#07b800] hover:bg-[#07b800]/5 transition-all duration-200 active:scale-95 text-xs font-bold text-slate-700 shadow-3xs"
+                        className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#2672b0] hover:bg-[#2672b0]/5 transition-all duration-200 active:scale-95 text-xs font-bold text-slate-700 shadow-3xs"
                       >
-                        <Banknote className="w-3.5 h-3.5 text-[#07b800]" />
+                        <Banknote className="w-3.5 h-3.5 text-[#2672b0]" />
                         {currency}
                       </button>
                     </div>
@@ -242,12 +242,12 @@ export default function Navbar() {
                   <Link
                     to="/bookings"
                     onClick={() => setIsMenuOpen(false)}
-                    className="relative w-full overflow-hidden bg-gradient-to-r from-[#07b800] to-[#06a300] text-white py-3.5 rounded-xl font-bold text-center block shadow-[0_4px_14px_rgba(7,184,0,0.3)] hover:shadow-[0_6px_20px_rgba(7,184,0,0.45)] transition-all duration-300 hover:scale-[1.02] active:scale-95"
+                    className="relative w-full overflow-hidden bg-gradient-to-r from-[#2672b0] to-[#1d5c92] text-white py-3.5 rounded-xl font-bold text-center block shadow-[0_4px_14px_rgba(38,114,176,0.3)] hover:shadow-[0_6px_20px_rgba(38,114,176,0.45)] transition-all duration-300 hover:scale-[1.02] active:scale-95"
                   >
                     <div className="relative z-10 flex items-center justify-center gap-2">
                       <span>{t('nav.book')}</span>
                       {selectedTourId && (
-                        <span className="w-2.5 h-2.5 bg-green-200 rounded-full border border-white animate-pulse"></span>
+                        <span className="w-2.5 h-2.5 bg-blue-200 rounded-full border border-white animate-pulse"></span>
                       )}
                     </div>
                   </Link>

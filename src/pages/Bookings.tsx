@@ -120,9 +120,9 @@ ${notes}`;
               src={selectedTour.imageUrl}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
-              <div className="inline-flex items-center gap-2 bg-[#07b800]/20 backdrop-blur-md border border-[#07b800] px-3 py-1 rounded-full">
-                <span className="w-2 h-2 rounded-full bg-[#07b800] animate-pulse"></span>
-                <span className="text-xs font-medium text-[#07b800]">{t('book.selectedTour')}</span>
+              <div className="inline-flex items-center gap-2 bg-[#2672b0]/20 backdrop-blur-md border border-[#2672b0] px-3 py-1 rounded-full">
+                <span className="w-2 h-2 rounded-full bg-[#2672b0] animate-pulse"></span>
+                <span className="text-xs font-medium text-[#2672b0]">{t('book.selectedTour')}</span>
               </div>
             </div>
           </div>
@@ -147,13 +147,13 @@ ${notes}`;
                     value={userCity}
                     onChange={(e) => setUserCity(e.target.value)}
                     placeholder={isAr ? 'مثال: القاهرة' : 'e.g. Cairo'}
-                    className="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:border-[#07b800] focus:ring-1 focus:ring-[#07b800] transition-colors shadow-sm hover:border-slate-400"
+                    className="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:border-[#2672b0] focus:ring-1 focus:ring-[#2672b0] transition-colors shadow-sm hover:border-slate-400"
                   />
                 </div>
                 
                 <div className="bg-slate-50 p-4 rounded-lg border border-slate-200 flex justify-between items-center">
                   <span className="text-sm md:text-base text-slate-700">{t('book.totalPrice')}</span>
-                  <span className="text-xl md:text-2xl font-bold text-[#07b800]">
+                  <span className="text-xl md:text-2xl font-bold text-[#2672b0]">
                     {formatPrice(selectedTour.price, currency, lang)}
                   </span>
                 </div>
@@ -163,10 +163,10 @@ ${notes}`;
             {/* Call to Action */}
             <button 
               onClick={handleCopyFirst}
-              className="w-full bg-white border border-slate-300 hover:border-[#07b800] text-slate-900 py-3.5 rounded-lg flex items-center justify-center gap-3 transition-all group relative overflow-hidden active:scale-98"
+              className="w-full bg-white border border-slate-300 hover:border-[#2672b0] text-slate-900 py-3.5 rounded-lg flex items-center justify-center gap-3 transition-all group relative overflow-hidden active:scale-98"
             >
-              <div className="absolute inset-0 bg-[#07b800]/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <Copy className="text-[#07b800] group-hover:scale-110 transition-transform w-5 h-5" />
+              <div className="absolute inset-0 bg-[#2672b0]/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <Copy className="text-[#2672b0] group-hover:scale-110 transition-transform w-5 h-5" />
               <span className="text-sm md:text-base font-semibold relative z-10 text-slate-800">
                 {copiedFirst ? (isAr ? 'تم نسخ بيانات الفاتورة!' : 'Receipt details copied!') : t('book.copyReceipt')}
               </span>
@@ -192,7 +192,7 @@ ${notes}`;
                     value={formName}
                     onChange={(e) => setFormName(e.target.value)}
                     placeholder={t('form.john')} 
-                    className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#07b800] focus:border-[#07b800] outline-none transition-all" 
+                    className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#2672b0] focus:border-[#2672b0] outline-none transition-all" 
                   />
                 </div>
                 <div>
@@ -202,7 +202,7 @@ ${notes}`;
                     value={formPhone}
                     onChange={(e) => setFormPhone(e.target.value)}
                     placeholder="+20 123 456 7890" 
-                    className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#07b800] focus:border-[#07b800] outline-none transition-all" 
+                    className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#2672b0] focus:border-[#2672b0] outline-none transition-all" 
                   />
                 </div>
                 <div>
@@ -212,7 +212,7 @@ ${notes}`;
                     value={formDestination}
                     onChange={(e) => setFormDestination(e.target.value)}
                     placeholder={t('form.maldives')} 
-                    className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#07b800] focus:border-[#07b800] outline-none transition-all" 
+                    className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#2672b0] focus:border-[#2672b0] outline-none transition-all" 
                   />
                 </div>
                 <div>
@@ -222,7 +222,7 @@ ${notes}`;
                     value={formCity}
                     onChange={(e) => setFormCity(e.target.value)}
                     placeholder={t('form.cairo')} 
-                    className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#07b800] focus:border-[#07b800] outline-none transition-all" 
+                    className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#2672b0] focus:border-[#2672b0] outline-none transition-all" 
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
@@ -232,7 +232,7 @@ ${notes}`;
                       type="date" 
                       value={formDepDate}
                       onChange={(e) => setFormDepDate(e.target.value)}
-                      className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#07b800] focus:border-[#07b800] outline-none transition-all text-sm" 
+                      className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#2672b0] focus:border-[#2672b0] outline-none transition-all text-sm" 
                     />
                   </div>
                   <div>
@@ -241,7 +241,7 @@ ${notes}`;
                       type="date" 
                       value={formRetDate}
                       onChange={(e) => setFormRetDate(e.target.value)}
-                      className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#07b800] focus:border-[#07b800] outline-none transition-all text-sm" 
+                      className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#2672b0] focus:border-[#2672b0] outline-none transition-all text-sm" 
                     />
                   </div>
                 </div>
@@ -251,7 +251,7 @@ ${notes}`;
                     <select 
                       value={formHotelTier}
                       onChange={(e) => setFormHotelTier(e.target.value)}
-                      className="w-full px-4 py-2 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#07b800]/20 focus:border-[#07b800] outline-none transition-all appearance-none cursor-pointer shadow-sm hover:border-slate-400"
+                      className="w-full px-4 py-2 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#2672b0]/20 focus:border-[#2672b0] outline-none transition-all appearance-none cursor-pointer shadow-sm hover:border-slate-400"
                     >
                       <option value={isAr ? '٣ نجوم' : '3 Stars'}>{isAr ? '٣ نجوم' : '3 Stars'}</option>
                       <option value={isAr ? '٤ نجوم' : '4 Stars'}>{isAr ? '٤ نجوم' : '4 Stars'}</option>
@@ -272,7 +272,7 @@ ${notes}`;
                       min="1" 
                       value={formAdults}
                       onChange={(e) => setFormAdults(e.target.value)}
-                      className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#07b800] focus:border-[#07b800] outline-none transition-all" 
+                      className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#2672b0] focus:border-[#2672b0] outline-none transition-all" 
                     />
                   </div>
                   <div>
@@ -282,7 +282,7 @@ ${notes}`;
                       min="0" 
                       value={formChildren}
                       onChange={(e) => setFormChildren(e.target.value)}
-                      className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#07b800] focus:border-[#07b800] outline-none transition-all" 
+                      className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#2672b0] focus:border-[#2672b0] outline-none transition-all" 
                     />
                   </div>
                   <div>
@@ -292,7 +292,7 @@ ${notes}`;
                       min="0" 
                       value={formBabies}
                       onChange={(e) => setFormBabies(e.target.value)}
-                      className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#07b800] focus:border-[#07b800] outline-none transition-all" 
+                      className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#2672b0] focus:border-[#2672b0] outline-none transition-all" 
                     />
                   </div>
                 </div>
@@ -304,13 +304,13 @@ ${notes}`;
                   value={formNotes}
                   onChange={(e) => setFormNotes(e.target.value)}
                   placeholder={t('book.preferences')} 
-                  className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#07b800] focus:border-[#07b800] outline-none transition-all"
+                  className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#2672b0] focus:border-[#2672b0] outline-none transition-all"
                 ></textarea>
               </div>
               <button 
                 type="button" 
                 onClick={handleCopySecond}
-                className="w-full bg-[#07b800] text-white py-4 rounded-lg font-bold text-lg shadow-md hover:bg-[#06a300] hover:shadow-lg transition-all active:scale-[0.98] flex items-center justify-center gap-2"
+                className="w-full bg-[#2672b0] text-white py-4 rounded-lg font-bold text-lg shadow-md hover:bg-[#1d5c92] hover:shadow-lg transition-all active:scale-[0.98] flex items-center justify-center gap-2"
               >
                 {copiedSecond ? (isAr ? 'تم نسخ بيانات الطلب بنجاح!' : 'Inquiry details copied!') : t('book.copyInquiry')}
               </button>
