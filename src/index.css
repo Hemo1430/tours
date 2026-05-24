@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Zain:wght@300;400;700;800;900&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -25,6 +26,10 @@
 }
 
 /* Custom class for manual overriding if needed */
+.font-zain {
+  font-family: 'Zain', system-ui, sans-serif !important;
+}
+
 .font-jf-flat {
   font-family: 'JF-Flat-Regular', 'JF Flat', system-ui, sans-serif !important;
 }
@@ -70,6 +75,6 @@ html[lang="ar"],
 html[lang="ar"] *,
 [dir="rtl"],
 [dir="rtl"] * {
-  font-family: 'JF-Flat-Regular', 'JF Flat', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  font-family: 'Zain', 'JF-Flat-Regular', 'JF Flat', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
 }
 
